@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Homework</title>
+    <meta charset="UTF-8">
+    <title>Homework</title>
 </head>
 <body>
 <!--
@@ -26,9 +26,10 @@
 Уточнение: пользователь всегда вводит корректное положительное целое число.
 -->
 <script>
-  "use strict";
+    "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+    const num = prompt('Введите число');
+    alert(`В числе ${num} количество сотен: ${Math.trunc(num / 100) % 10} , десятков: ${Math.trunc(num / 10) % 10}, единиц: ${num % 10}`)
 </script>
 </body>
 </html>
