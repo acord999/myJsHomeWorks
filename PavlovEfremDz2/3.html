@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Homework</title>
+    <meta charset="UTF-8">
+    <title>Homework</title>
 </head>
 <body>
 <!--
@@ -19,9 +19,18 @@
 В остальных случаях программа не должна ничего выводить.
 -->
 <script>
-  "use strict";
+    "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+    const a = Number(prompt('Введите число а'));
+    const b = Number(prompt('Введите число b'));
+
+    if ((a > 0) && (b > 0)) {
+        console.log(a - b)
+    } else if ((a < 0) && (b < 0)) {
+        console.log(a * b)
+    } else {
+        console.log(a + b)
+    }
 </script>
 </body>
 </html>
