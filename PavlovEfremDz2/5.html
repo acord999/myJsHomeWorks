@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Homework</title>
+    <meta charset="UTF-8">
+    <title>Homework</title>
 </head>
 <body>
 <!--
@@ -30,9 +30,83 @@ Infinity делать не нужно, однако, в случае если б
 Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
 -->
 <script>
-  "use strict";
+    "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+    console.log(mathOperation(1, 1, '+'));
+    console.log(mathOperation(10, 5, '-'));
+    console.log(mathOperation(2, 2, '*'));
+    console.log(mathOperation(6, 2, '/'));
+    console.log(mathOperation(5, 3, ":)"));
+
+
+    /**
+     * Считает сумму аргументов.
+     * @param {number} a - Первое слагаемое.
+     * @param {number} b - Второе слагаемое.
+     * @return {number} - Сумма чисел.
+     */
+    function mySum(a, b) {
+        return a + b
+    }
+
+    /**
+     * Считает разницу аргументов.
+     * @param {number} a - Первое число.
+     * @param {number} b - Второе число.
+     * @return {number} - Разница чисел.
+     */
+    function mySubtraction(a, b) {
+        if (a > b) {
+            return a - b
+        } else if (a < b) {
+            return b - a
+        } else return 0
+    }
+
+    /**
+     * Считает произведение аргументов.
+     * @param {number} a - Первый множитель.
+     * @param {number} b - Второй множитель.
+     * @return {number} Произведение чисел.
+     */
+    function myMultiple(a, b) {
+        return a * b
+    }
+
+    /**
+     * Считает частное аргументов.
+     * @param {number} a - Делимое.
+     * @param {number} b - Делитель. Строго b > 0.
+     * @return {number} Частное чисел.
+     */
+    function myDivision(a, b) {
+        if (b === 0) {
+            throw ('Ошибка! На ноль делить нельзя!')
+        } else {
+            return a / b
+        }
+    }
+
+    /**
+     * Считает разницу аргументов.
+     * @param {number} arg1 - Первое число.
+     * @param {number} arg2 - Второе число.
+     * @param {string} operation - Математическая операция.
+     * @return {number} - Результат действия.
+     */
+    function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+            case ('+'):
+                return mySum(arg1, arg2)
+            case ('-'):
+                return mySubtraction(arg1, arg2)
+            case ('*'):
+                return myMultiple(arg1, arg2)
+            case ('/'):
+                return myDivision(arg1, arg2)
+        }
+        return NaN
+    }
 </script>
 </body>
 </html>
