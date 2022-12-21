@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Homework</title>
+    <meta charset="UTF-8">
+    <title>Homework</title>
 </head>
 <body>
 <!--
@@ -29,9 +29,60 @@
 Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
 -->
 <script>
-  "use strict";
+    "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+    console.log(mySum(5, 5))
+    console.log(mySubtraction(5, 5))
+    console.log(myMultiple(2, 8))
+    console.log(myDivision(5, 0))
+
+
+    /**
+     * Считает сумму аргументов.
+     * @param {number} a - Первое слагаемое.
+     * @param {number} b - Второе слагаемое.
+     * @return {number} - Сумма чисел.
+     */
+    function mySum(a, b) {
+        return a + b
+    }
+
+    /**
+     * Считает разницу аргументов.
+     * @param {number} a - Первое число.
+     * @param {number} b - Второе число.
+     * @return {number} - Разница чисел.
+     */
+    function mySubtraction(a, b) {
+        if (a > b) {
+            return a - b
+        } else if (a < b) {
+            return b - a
+        } else return 0
+    }
+    /**
+     * Считает произведение аргументов.
+     * @param {number} a - Первый множитель.
+     * @param {number} b - Второй множитель.
+     * @return {number} Произведение чисел.
+     */
+    function myMultiple(a, b) {
+        return a * b
+    }
+
+    /**
+     * Считает частное аргументов.
+     * @param {number} a - Делимое.
+     * @param {number} b - Делитель. Строго b > 0.
+     * @return {number} Частное чисел.
+     */
+    function myDivision(a, b) {
+        if (b === 0) {
+            throw ('Ошибка! На ноль делить нельзя!')
+        } else {
+            return a / b
+        }
+    }
 </script>
 </body>
 </html>
